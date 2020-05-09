@@ -4,6 +4,8 @@
   "description": "Elventy project management site template",
   "main": "src/index.js",
   "scripts": {
+    "start": "eleventy --serve",
+    "dist": "eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/LonnyGomes/project-management-template-site/issues"
   },
-  "homepage": "https://github.com/LonnyGomes/project-management-template-site#readme"
+  "homepage": "https://github.com/LonnyGomes/project-management-template-site#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0"
+  }
 }
