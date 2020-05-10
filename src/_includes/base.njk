@@ -11,6 +11,14 @@ title: Project Management Template
         <title>{{ title }}</title>
     </head>
     <body>
-        {{ content | safe }}
+        <header>
+            {% include "header.njk" %}
+        </header>
+        <main>
+            {{ content | safe }}
+        </main>
+        <footer>
+            {% include "footer.njk" %}
+        </footer>
     </body>
 </html>
