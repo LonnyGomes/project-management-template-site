@@ -19,7 +19,6 @@ module.exports = function (eleventyConfig) {
             let results = null;
             try {
                 results = await renderMermaidDef(content);
-                console.log('results', results);
             } catch (error) {
                 results = `<pre>${error.message}</pre>`;
             }
