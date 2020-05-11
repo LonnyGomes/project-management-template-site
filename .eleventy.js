@@ -1,4 +1,5 @@
 const util = require('util');
+const { renderMermaidDef } = require('./lib/mermaid-render');
 
 module.exports = function (eleventyConfig) {
     // directories to copy over
@@ -10,6 +11,22 @@ module.exports = function (eleventyConfig) {
 
     // filters
     eleventyConfig.addFilter('debug', (data) => util.inspect(data));
+
+    // shortcodes
+    eleventyConfig.addPairedNunjucksAsyncShortcode(
+        'mermaid',
+        async (content) => {
+            let results = null;
+            try {
+                results = await renderMermaidDef(content);
+                console.log('results', results);
+            } catch (error) {
+                results = `<pre>${error.message}</pre>`;
+            }
+
+            return results;
+        }
+    );
 
     return {
         dir: {
