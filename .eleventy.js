@@ -13,6 +13,11 @@ module.exports = function (eleventyConfig) {
     // filters
     eleventyConfig.addFilter('debug', (data) => util.inspect(data));
 
+    // collections
+    eleventyConfig.addCollection('tasks', (collection) =>
+        collection.getFilteredByGlob('src/tasks/*.md')
+    );
+
     // shortcodes
     eleventyConfig.addPairedNunjucksAsyncShortcode(
         'mermaid',
