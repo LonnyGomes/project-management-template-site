@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
 
     // layouts
     eleventyConfig.addLayoutAlias('base', 'base.njk');
+    eleventyConfig.addLayoutAlias('task', 'task.njk');
 
     // filters
     eleventyConfig.addFilter('debug', (data) => util.inspect(data));
