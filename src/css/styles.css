@@ -60,6 +60,16 @@ footer {
     color: var(--header-font-clr);
 }
 
+.footer-container {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.footer-container a {
+    color: var(--footer-font-clr);
+}
+
 .gantt-chart {
     background-color: snow;
 }
