@@ -1,7 +1,19 @@
 :root {
-    --main-bg-clr: rgb(48, 48, 48);
-    --prim-panel-bg-clr: rebeccapurple;
+    --primary-clr: #1b2431;
+    --secondary-clr: #016795;
+    --tertiary-clr: #1e488f;
+
+    /* background colors */
+    --main-bg-clr: snow;
+    --alt-bg-clr: var(--secondary-clr);
+    --prim-panel-bg-clr: var(--secondary-clr);
+    --footer-bg-clr: var(--tertiary-clr);
+
+    /* font colors */
     --prim-panel-font-clr: snow;
+    --header-font-clr: snow;
+
+    /* dimensions */
     --header-height: 100px;
     --footer-height: 80px;
 }
@@ -20,18 +32,20 @@ body {
 }
 
 header {
-    background-color: var(--prim-panel-bg-clr);
+    background-color: var(--primary-clr);
+    color: var(--header-font-clr);
 }
 
 article {
     min-height: 100%;
     display: grid;
-    grid-template-rows: var(--header-height) 1fr auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-columns: 100%;
 }
 
 footer {
-    background-color: var(--prim-panel-bg-clr);
+    background-color: var(--footer-bg-clr);
+    color: var(--header-font-clr);
 }
 
 .gantt-chart {
@@ -41,4 +55,5 @@ footer {
 .primary-panel {
     margin: 0px;
     color: var(--prim-panel-font-clr);
+    background-color: var(--prim-panel-bg-clr);
 }
