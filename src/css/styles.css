@@ -3,6 +3,10 @@
     --secondary-clr: #016795;
     --tertiary-clr: #1e488f;
 
+    /* fonts */
+    --body-font-family: 'Ubuntu', sans-serif;
+    --header-font-family: 'Patua One', cursive;
+
     /* background colors */
     --main-bg-clr: snow;
     --alt-bg-clr: var(--secondary-clr);
@@ -29,6 +33,14 @@ body {
     background-color: var(--main-bg-clr);
     margin: 0px;
     padding: 0px;
+    font-family: var(--body-font-family);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--header-font-family);
 }
 
 header {
