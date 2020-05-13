@@ -8,9 +8,15 @@ module.exports = function (eleventyConfig) {
 
     // layouts
     eleventyConfig.addLayoutAlias('base', 'base.njk');
+    eleventyConfig.addLayoutAlias('task', 'task.njk');
 
     // filters
     eleventyConfig.addFilter('debug', (data) => util.inspect(data));
+
+    // collections
+    eleventyConfig.addCollection('tasks', (collection) =>
+        collection.getFilteredByGlob('src/tasks/*.md')
+    );
 
     // shortcodes
     eleventyConfig.addPairedNunjucksAsyncShortcode(

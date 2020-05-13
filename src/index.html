@@ -1,6 +1,10 @@
 ---
 layout: base.njk
 title: Project Management Template
+pagination: 
+    data: collections.tasks
+    size: 5
+    alias: tasks
 ---
 
 <div class="gantt-chart">
@@ -19,3 +23,12 @@ gantt
 
 {% endmermaid %}
 </div> 
+
+<h2>Latest Tasks</h2>
+<div class="latest-tasks-list"> 
+    <ul>
+    {%- for task in tasks | reverse -%}
+    <li><a href="{{ task.url }}">{{ task.data.title }}</a></li>
+    {%- endfor -%}
+    </ul>
+</div>
