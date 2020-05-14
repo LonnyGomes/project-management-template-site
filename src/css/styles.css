@@ -8,7 +8,7 @@
     --header-font-family: 'Patua One', cursive;
 
     /* background colors */
-    --main-bg-clr: snow;
+    --main-bg-clr: #e2e2e2;
     --alt-bg-clr: var(--secondary-clr);
     --prim-panel-bg-clr: var(--secondary-clr);
     --footer-bg-clr: var(--tertiary-clr);
@@ -16,6 +16,7 @@
     /* font colors */
     --prim-panel-font-clr: snow;
     --header-font-clr: snow;
+    --footer-font-clr: snow;
 
     /* dimensions */
     --header-height: 100px;
@@ -41,6 +42,11 @@ h2,
 h3,
 h4 {
     font-family: var(--header-font-family);
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin: 10px 0px;
 }
 
 header {
