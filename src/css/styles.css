@@ -1,7 +1,24 @@
 :root {
-    --main-bg-clr: rgb(48, 48, 48);
-    --prim-panel-bg-clr: rebeccapurple;
+    --primary-clr: #1b2431;
+    --secondary-clr: #016795;
+    --tertiary-clr: #1e488f;
+
+    /* fonts */
+    --body-font-family: 'Ubuntu', sans-serif;
+    --header-font-family: 'Patua One', cursive;
+
+    /* background colors */
+    --main-bg-clr: #e2e2e2;
+    --alt-bg-clr: var(--secondary-clr);
+    --prim-panel-bg-clr: var(--secondary-clr);
+    --footer-bg-clr: var(--tertiary-clr);
+
+    /* font colors */
     --prim-panel-font-clr: snow;
+    --header-font-clr: snow;
+    --footer-font-clr: snow;
+
+    /* dimensions */
     --header-height: 100px;
     --footer-height: 80px;
 }
@@ -17,21 +34,46 @@ body {
     background-color: var(--main-bg-clr);
     margin: 0px;
     padding: 0px;
+    font-family: var(--body-font-family);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--header-font-family);
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin: 10px 0px;
 }
 
 header {
-    background-color: var(--prim-panel-bg-clr);
+    background-color: var(--primary-clr);
+    color: var(--header-font-clr);
 }
 
 article {
     min-height: 100%;
     display: grid;
-    grid-template-rows: var(--header-height) 1fr auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-columns: 100%;
 }
 
 footer {
-    background-color: var(--prim-panel-bg-clr);
+    background-color: var(--footer-bg-clr);
+    color: var(--header-font-clr);
+}
+
+.footer-container {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.footer-container a {
+    color: var(--footer-font-clr);
 }
 
 .gantt-chart {
@@ -41,4 +83,5 @@ footer {
 .primary-panel {
     margin: 0px;
     color: var(--prim-panel-font-clr);
+    background-color: var(--prim-panel-bg-clr);
 }
