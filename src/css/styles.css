@@ -61,6 +61,16 @@ article {
     grid-template-columns: 100%;
 }
 
+main {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto auto auto;
+    grid-template-areas:
+        'chart chart chart'
+        'panel panel panel'
+        '. tasks .';
+}
+
 footer {
     background-color: var(--footer-bg-clr);
     color: var(--header-font-clr);
@@ -78,10 +88,18 @@ footer {
 
 .gantt-chart {
     background-color: snow;
+    grid-area: chart;
 }
 
 .primary-panel {
     margin: 0px;
     color: var(--prim-panel-font-clr);
     background-color: var(--prim-panel-bg-clr);
+    grid-area: panel;
+    display: grid;
+    justify-content: center;
+}
+
+.task-panel {
+    grid-area: tasks;
 }

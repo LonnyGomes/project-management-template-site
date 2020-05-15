@@ -28,11 +28,13 @@ gantt
 <h2>TODO:</h2> 
 </div>
 
-<h2>Latest Tasks</h2>
-<div class="latest-tasks-list"> 
-    <ul>
-    {%- for task in tasks | reverse -%}
-        <li><a href="{{ task.url }}">{{ task.data.title }}</a></li>
-    {%- endfor -%}
-    </ul>
+<div class="task-panel">
+    <h2>Latest Tasks</h2>
+    <div class="latest-tasks-list"> 
+        <ul>
+        {%- for task in tasks | reverse -%}
+            <li><a href="{{ task.url }}">{{ task.data.title }}</a></li>
+        {%- endfor -%}
+        </ul>
+    </div>
 </div>
