@@ -24,15 +24,28 @@ gantt
 {% endmermaid %}
 </div> 
 
-<div class="primary-panel">
-<h2>TODO:</h2> 
+<div class="totals-panel">
+    <div class="totals-container">
+        <h3>Total Tasks</h3>
+        <p class="totals-val">6</p>
+    </div>
+    <div class="totals-container">
+        <h3>Completed tasks</h3>
+        <p class="totals-val">2</p>
+    </div>
+    <div class="totals-container">
+        <h3>Percent complete</h3>
+        <p class="totals-val">33%</p>
+    </div>
 </div>
 
-<h2>Latest Tasks</h2>
-<div class="latest-tasks-list"> 
-    <ul>
-    {%- for task in tasks | reverse -%}
-        <li><a href="{{ task.url }}">{{ task.data.title }}</a></li>
-    {%- endfor -%}
-    </ul>
+<div class="task-panel">
+    <h2>Latest Tasks</h2>
+    <div class="latest-tasks-list"> 
+        <ul>
+        {%- for task in tasks | reverse -%}
+            <li><a href="{{ task.url }}">{{ task.data.title }}</a></li>
+        {%- endfor -%}
+        </ul>
+    </div>
 </div>
