@@ -121,3 +121,31 @@ footer {
 .task-panel {
     grid-area: tasks;
 }
+
+.task-panel h2 {
+    text-align: center;
+}
+
+.latest-tasks-list ul {
+    padding: 0px;
+}
+
+.latest-tasks-list li {
+    list-style: none;
+    padding-left: 1rem;
+    text-indent: -0.7rem;
+    font-size: 1.2rem;
+}
+
+.latest-tasks-list li::before {
+    content: '📝 ';
+}
+
+.latest-tasks-list a {
+    color: var(--primary-clr);
+    text-decoration: none;
+}
+
+.latest-tasks-list a:hover {
+    text-decoration: underline;
+}
