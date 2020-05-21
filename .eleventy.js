@@ -1,5 +1,6 @@
 const util = require('util');
 const { renderMermaidDef } = require('./lib/mermaid-render');
+const moment = require('moment');
 
 module.exports = function (eleventyConfig) {
     // directories to copy over
@@ -12,6 +13,12 @@ module.exports = function (eleventyConfig) {
 
     // filters
     eleventyConfig.addFilter('debug', (data) => util.inspect(data));
+    eleventyConfig.addFilter('taskDate', (dateStr) => {
+        const isValidDate = moment(dateStr).isValid();
+        return isValidDate
+            ? moment(dateStr).format('ddd, DD MMM YYYY')
+            : 'Not Specified';
+    });
 
     // collections
     eleventyConfig.addCollection('tasks', (collection) =>
