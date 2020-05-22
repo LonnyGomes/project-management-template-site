@@ -1,9 +1,16 @@
 ---
 layout: base
 title: Task Entry
+date: Last Modified
+endDate: 
 ---
 
 <h1>{{ title }}</h1>
+
+<ul>
+    <li>Start date: {{ page.date | taskDate}}</li>
+    <li>Completion Date: {{ endDate | taskDate}}</li>
+</ul>
 
 <div class="task-container">
     {{ content | safe }}
