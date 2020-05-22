@@ -44,7 +44,7 @@ gantt
     <div class="latest-tasks-list"> 
         <ul>
         {%- for task in tasks | reverse -%}
-            <li><a href="{{ task.url }}">{{ task.data.title }}</a></li>
+            <li><span>{{ task.data.date | taskDateShort }}</span> : <a href="{{ task.url }}">{{ task.data.title }}</a></li>
         {%- endfor -%}
         </ul>
     </div>
