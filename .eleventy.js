@@ -13,12 +13,11 @@ module.exports = function (eleventyConfig) {
 
     // filters
     eleventyConfig.addFilter('debug', (data) => util.inspect(data));
-    eleventyConfig.addFilter('taskDate', (dateStr) => {
-        const isValidDate = moment(dateStr).isValid();
-        return isValidDate
+    eleventyConfig.addFilter('taskDate', (dateStr) =>
+        moment(dateStr).isValid()
             ? moment(dateStr).format('ddd, DD MMM YYYY')
-            : 'Not Specified';
-    });
+            : 'Not Specified'
+    );
 
     // collections
     eleventyConfig.addCollection('tasks', (collection) =>
