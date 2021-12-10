@@ -29,6 +29,6 @@
     "puppeteer": "^3.0.4"
   },
   "dependencies": {
-    "mermaid": "^8.5.0"
+    "mermaid": "^8.11.0"
   }
 }
