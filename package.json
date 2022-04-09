@@ -25,7 +25,7 @@
   "homepage": "https://github.com/LonnyGomes/project-management-template-site#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
-    "moment": "^2.26.0",
+    "moment": "^2.29.2",
     "puppeteer": "^3.0.4"
   },
   "dependencies": {
